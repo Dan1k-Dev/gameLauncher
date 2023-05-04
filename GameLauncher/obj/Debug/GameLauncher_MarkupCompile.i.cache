@@ -1,0 +1,20 @@
+﻿GameLauncher
+
+
+winexe
+C#
+.cs
+C:\Users\itsfo\Desktop\Курсовой_проект_Фролов\GameLauncher }}\GameLauncher\obj\Debug\
+GameLauncher
+none
+false
+DEBUG;TRACE
+C:\Users\itsfo\Desktop\Курсовой_проект_Фролов\GameLauncher }}\GameLauncher\App.xaml
+332090388953
+
+48288675738
+29-22858732
+Pages\Account.xaml;Pages\Cart.xaml;Pages\Develop.xaml;Pages\DevelopGame.xaml;Pages\EditGame.xaml;Pages\Games.xaml;Pages\RepForBalance.xaml;Pages\RepForGames.xaml;Pages\Shop.xaml;Windows\BalanceReplenishment.xaml;Windows\BalanceSuccess.xaml;Windows\BuyFail.xaml;Windows\EditProfile.xaml;Windows\GameAddedToCart.xaml;Windows\GameCurInCart.xaml;Windows\MessageComment.xaml;Windows\MessageConverValue.xaml;Windows\MessageEmailIncorrect.xaml;Windows\MessageGameAdded.xaml;Windows\MessageGameAddedDev.xaml;Windows\MessageGameDevelop.xaml;Windows\MessageGameEdit.xaml;Windows\MessageGameExist.xaml;Windows\MessageGameInBibliory.xaml;Windows\MessageGameNone.xaml;Windows\MessageGamePresent.xaml;Windows\MessageNoneData.xaml;Windows\MessageProfileEdited.xaml;Windows\NonGameSelect.xaml;Windows\SignIn.xaml;Windows\SignUp.xaml;Windows\SignUpErrorMessage.xaml;Windows\SignUpGreatSave.xaml;
+
+True
+

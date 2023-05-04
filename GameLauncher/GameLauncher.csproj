@@ -1,0 +1,421 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{46E72276-3AEC-4237-A454-562E5E2B1BA9}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>GameLauncher</RootNamespace>
+    <AssemblyName>GameLauncher</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{60dc8134-eba5-43b8-bcc9-bb4bc16c2548};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <WarningLevel>4</WarningLevel>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Data.Linq" />
+    <Reference Include="System.Xml" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xaml">
+      <RequiredTargetFramework>4.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="WindowsBase" />
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+  </ItemGroup>
+  <ItemGroup>
+    <ApplicationDefinition Include="App.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </ApplicationDefinition>
+    <Compile Include="Database\CartGames.cs" />
+    <Compile Include="Database\Developer.cs" />
+    <Compile Include="Database\Game.cs" />
+    <Compile Include="Database\Ganre.cs" />
+    <Compile Include="Database\LauncherDbContext.cs" />
+    <Compile Include="Database\Logs.cs" />
+    <Compile Include="Database\LogsBalance.cs" />
+    <Compile Include="Database\LogsGames.cs" />
+    <Compile Include="Database\User.cs" />
+    <Compile Include="Database\UserGames.cs" />
+    <Compile Include="Pages\Account.xaml.cs">
+      <DependentUpon>Account.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Cart.xaml.cs">
+      <DependentUpon>Cart.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Develop.xaml.cs">
+      <DependentUpon>Develop.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\DevelopGame.xaml.cs">
+      <DependentUpon>DevelopGame.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\EditGame.xaml.cs">
+      <DependentUpon>EditGame.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Games.xaml.cs">
+      <DependentUpon>Games.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\RepForBalance.xaml.cs">
+      <DependentUpon>RepForBalance.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\RepForGames.xaml.cs">
+      <DependentUpon>RepForGames.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Shop.xaml.cs">
+      <DependentUpon>Shop.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Windows\BalanceReplenishment.xaml.cs">
+      <DependentUpon>BalanceReplenishment.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Windows\BalanceSuccess.xaml.cs">
+      <DependentUpon>BalanceSuccess.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Windows\BuyFail.xaml.cs">
+      <DependentUpon>BuyFail.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Windows\EditProfile.xaml.cs">
+      <DependentUpon>EditProfile.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Windows\GameAddedToCart.xaml.cs">
+      <DependentUpon>GameAddedToCart.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Windows\GameCurInCart.xaml.cs">
+      <DependentUpon>GameCurInCart.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Windows\MessageComment.xaml.cs">
+      <DependentUpon>MessageComment.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Windows\MessageConverValue.xaml.cs">
+      <DependentUpon>MessageConverValue.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Windows\MessageEmailIncorrect.xaml.cs">
+      <DependentUpon>MessageEmailIncorrect.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Windows\MessageGameAdded.xaml.cs">
+      <DependentUpon>MessageGameAdded.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Windows\MessageGameAddedDev.xaml.cs">
+      <DependentUpon>MessageGameAddedDev.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Windows\MessageGameDevelop.xaml.cs">
+      <DependentUpon>MessageGameDevelop.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Windows\MessageGameEdit.xaml.cs">
+      <DependentUpon>MessageGameEdit.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Windows\MessageGameExist.xaml.cs">
+      <DependentUpon>MessageGameExist.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Windows\MessageGameInBibliory.xaml.cs">
+      <DependentUpon>MessageGameInBibliory.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Windows\MessageGameNone.xaml.cs">
+      <DependentUpon>MessageGameNone.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Windows\MessageGamePresent.xaml.cs">
+      <DependentUpon>MessageGamePresent.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Windows\MessageNoneData.xaml.cs">
+      <DependentUpon>MessageNoneData.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Windows\MessageProfileEdited.xaml.cs">
+      <DependentUpon>MessageProfileEdited.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Windows\NonGameSelect.xaml.cs">
+      <DependentUpon>NonGameSelect.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Windows\SignUp.xaml.cs">
+      <DependentUpon>SignUp.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Windows\SignUpErrorMessage.xaml.cs">
+      <DependentUpon>SignUpErrorMessage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Windows\SignUpGreatSave.xaml.cs">
+      <DependentUpon>SignUpGreatSave.xaml</DependentUpon>
+    </Compile>
+    <Page Include="Pages\Account.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\Cart.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\Develop.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\DevelopGame.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\EditGame.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\Games.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\RepForBalance.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\RepForGames.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\Shop.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Windows\BalanceReplenishment.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Windows\BalanceSuccess.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Windows\BuyFail.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Windows\EditProfile.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Windows\GameAddedToCart.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Windows\GameCurInCart.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Windows\MessageComment.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Windows\MessageConverValue.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Windows\MessageEmailIncorrect.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Windows\MessageGameAdded.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Windows\MessageGameAddedDev.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Windows\MessageGameDevelop.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Windows\MessageGameEdit.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Windows\MessageGameExist.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Windows\MessageGameInBibliory.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Windows\MessageGameNone.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Windows\MessageGamePresent.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Windows\MessageNoneData.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Windows\MessageProfileEdited.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Windows\NonGameSelect.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Windows\SignIn.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Compile Include="App.xaml.cs">
+      <DependentUpon>App.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Windows\SignIn.xaml.cs">
+      <DependentUpon>SignIn.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Page Include="Windows\SignUp.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Windows\SignUpErrorMessage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Windows\SignUpGreatSave.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Properties\AssemblyInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Windows\images\gamesImage.jpeg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Windows\images\Google.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Windows\images\Email.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Windows\images\VkLogo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Windows\images\Password.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Windows\images\CloseApp.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Windows\images\Avatar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Windows\images\Minimize.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <COMReference Include="Microsoft.Office.Core">
+      <Guid>{2DF8D04C-5BFA-101B-BDE5-00AA0044DE52}</Guid>
+      <VersionMajor>2</VersionMajor>
+      <VersionMinor>8</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+    <COMReference Include="Microsoft.Office.Interop.Excel">
+      <Guid>{00020813-0000-0000-C000-000000000046}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>9</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+    <COMReference Include="Microsoft.Office.Interop.Word">
+      <Guid>{00020905-0000-0000-C000-000000000046}</Guid>
+      <VersionMajor>8</VersionMajor>
+      <VersionMinor>7</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+    <COMReference Include="VBIDE">
+      <Guid>{0002E157-0000-0000-C000-000000000046}</Guid>
+      <VersionMajor>5</VersionMajor>
+      <VersionMinor>3</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="EntityFramework">
+      <Version>6.4.4</Version>
+    </PackageReference>
+    <PackageReference Include="Extended.Wpf.Toolkit">
+      <Version>4.4.0</Version>
+    </PackageReference>
+    <PackageReference Include="MaterialDesignThemes">
+      <Version>4.7.1</Version>
+    </PackageReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Pages\Icons\Close.png" />
+    <Resource Include="Pages\Icons\Open.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Pages\Icons\CloseApp.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Pages\Icons\Minimize.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Windows\images\GitHubLogo.png" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

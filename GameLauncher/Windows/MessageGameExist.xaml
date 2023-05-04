@@ -1,0 +1,19 @@
+﻿<Window x:Class="GameLauncher.Windows.MessageGameExist"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:GameLauncher.Windows"
+        mc:Ignorable="d"
+        Title="MessageGameExist" Height="100" Width="300" WindowStartupLocation="CenterScreen"
+        WindowStyle="None" ResizeMode="NoResize" Background="#151719">
+    <Border CornerRadius="10 0 0 10">
+        <Grid>
+            <Image Source="images/CloseApp.png" Width="23" Height="22" 
+                   Margin="0,5,5,0" MouseUp="Close_MouseUp"
+                   x:Name="Close" Style="{StaticResource imgClose}"/>
+            <TextBlock Text="Игра добавлена в вашу библиотеку!" Foreground="White"
+                   Style="{StaticResource normalText}" VerticalAlignment="Center"/>
+        </Grid>
+    </Border>
+</Window>

@@ -1,0 +1,14 @@
+{
+  "version": 2,
+  "dgSpecHash": "vYu9nimrIsiBxWFqal0AlKbaN5G//wZN1xjldeLQk2NoQhkr6LpT7JsKGR7Jb7nyHi6uSUQL86oMydKtD93Cng==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\itsfo\\Desktop\\Курсовой_проект_Фролов\\GameLauncher }}\\GameLauncher\\GameLauncher.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\itsfo\\.nuget\\packages\\entityframework\\6.4.4\\entityframework.6.4.4.nupkg.sha512",
+    "C:\\Users\\itsfo\\.nuget\\packages\\extended.wpf.toolkit\\4.4.0\\extended.wpf.toolkit.4.4.0.nupkg.sha512",
+    "C:\\Users\\itsfo\\.nuget\\packages\\materialdesigncolors\\2.1.1\\materialdesigncolors.2.1.1.nupkg.sha512",
+    "C:\\Users\\itsfo\\.nuget\\packages\\materialdesignthemes\\4.7.1\\materialdesignthemes.4.7.1.nupkg.sha512",
+    "C:\\Users\\itsfo\\.nuget\\packages\\microsoft.xaml.behaviors.wpf\\1.1.39\\microsoft.xaml.behaviors.wpf.1.1.39.nupkg.sha512"
+  ],
+  "logs": []
+}
